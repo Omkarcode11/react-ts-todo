@@ -220,6 +220,7 @@ const MyModal: React.FC<ModalProps> = ({
                     id='repeat'
                     value={data.repeat}
                     onChange={handleRepeatChange}>
+                    <option value='none'>------</option>
                     <option value='Monday'>At Monday</option>
                     <option value='Friday'>At Friday</option>
                   </select>
