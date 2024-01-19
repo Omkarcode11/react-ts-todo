@@ -41,7 +41,7 @@ const MyModal: React.FC<ModalProps> = ({
     title:"",
     description:"",
     subject:"",
-    frequency:"",
+    frequency:"Daily",
     repeat:"",
     time:""
   });
@@ -214,8 +214,8 @@ const MyModal: React.FC<ModalProps> = ({
                     id='repeat'
                     value={data.repeat}
                     onChange={handleRepeatChange}>
-                    <option value='At Monday'>At Monday</option>
-                    <option value='At Friday'>At Friday</option>
+                    <option value='Monday'>At Monday</option>
+                    <option value='Friday'>At Friday</option>
                   </select>
                 )}
               </div>
