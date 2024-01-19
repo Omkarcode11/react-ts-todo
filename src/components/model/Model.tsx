@@ -121,9 +121,15 @@ const MyModal: React.FC<ModalProps> = ({
       if (data.frequency === "Weekly") {
         
         updatedRepeat = generateString(days);
-        let newDataWithRepeat = { ...data, repeat: updatedRepeat };
-        updateTodoFn(newDataWithRepeat);
-        patchTodosApi(newDataWithRepeat,newDataWithRepeat._id)
+        if(updatedRepeat.length>2){
+
+          let newDataWithRepeat = { ...data, repeat: updatedRepeat };
+          updateTodoFn(newDataWithRepeat);
+          patchTodosApi(newDataWithRepeat,newDataWithRepeat._id)
+        }else{
+          updateTodoFn(data);
+          patchTodosApi(data,data._id)
+        }
       } else {
         updateTodoFn(data);
         patchTodosApi(data,data._id)
